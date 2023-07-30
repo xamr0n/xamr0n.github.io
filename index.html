@@ -7,193 +7,161 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+body {
+  background: #212121;
+  font-family: "Candara";
+  width: 100%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
-    body {
-      background: #212121;
-      font-family: "Candara";
-      width: 100%;
-      color: #666;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
+nav {
+  background: #212121;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
 
-    nav {
-      background: #212121;
-      position: fixed;
-      overflow: hidden;
-      top: 0;
-      width: 100%;
-    }
+a, a:hover {
+  text-decoration: none;
+}
 
-    a, a:hover {
-      text-decoration: none;
-    }
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
 
-    .socialbtns, .socialbtns ul, .socialbtns li {
-      margin: 0;
-      padding: 0;
-      height: auto;
-    }
+.socialbtns li {
+  list-style: none outside none;
+  display: inline-block;
+  padding: 5px;
+}
 
-    .socialbtns li {
-      list-style: none outside none;
-      display: inline-block;
-      padding: 5px;
-    }
+.socialbtns .fa {
+  color: #666;
+  background: #212121;
+  box-shadow: 1px -0px 3px 1px #999;
+  width: 40px;
+  height: 28px;
+  padding-top: 12px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+}
 
-    .socialbtns .fa {
-      color: #666;
-      background: #212121;
-      box-shadow: 1px -0px 3px 1px #999;
-      width: 40px;
-      height: 28px;
-      padding-top: 12px;
-      border-radius: 30px;
-      -moz-border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -o-border-radius: 30px;
-      transition: all ease 0.3s;
-      -moz-transition: all ease 0.3s;
-      -webkit-transition: all ease 0.3s;
-      -o-transition: all ease 0.3s;
-      transform: rotate(-360deg);
-      -moz-transform: rotate(-360deg);
-      -webkit-transform: rotate(-360deg);
-      -o-transform: rotate(-360deg);
-    }
+.socialbtns .fa:hover {
+  text-shadow: inset 1px 1px 1px #eee;
+  color: #ddd;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
 
-    .socialbtns .fa:hover {
-      text-shadow: inset 1px 1px 1px #eee;
-      color: #ddd;
-      transition: all ease 0.3s;
-      -moz-transition: all ease 0.3s;
-      -webkit-transition: all ease 0.3s;
-      -o-transition: all ease 0.3s;
-      transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-    }
+.main {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px auto;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* Center website */
-    .main {
-      display: flex;
-      width: 1200px;
-      margin: 50px auto;
-      padding: 50px auto;
-      background-color: #212121;
-      justify-content: center;
-      align-items: center;
-      font-family: Candara;
-      overflow: hidden;
-    }
+h1 {
+  font-size: 35px;
+  word-break: break-all;
+}
 
-    .container {
-      border-radius: 10px;
-      background: #111;
-      box-shadow: 1px -0px 2px 1px #666;
-      padding: 10px;
-    }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px double #666;
+  margin: 1em 0;
+  padding: 0;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 35px;
-      word-break: break-all;
-    }
+.row {
+  margin: 0 auto;
+  padding: 5px auto;
+}
 
-    hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px double #666;
-      margin: 1em 0;
-      padding: 0;
-    }
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
 
-    .row {
-      margin: 8px -16px;
-    }
+/* Create four equal columns that floats next to each other */
+.column {
+  display: flex;
+  float: left;
+  width: 23%;
+  margin: 2px;
+}
 
-    /* Add padding BETWEEN each column */
-    .row,
-    .row > .column {
-      padding: 8px;
-    }
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    /* Create four equal columns that float next to each other */
-    .column {
-      float: left;
-      width: 23%;
-      margin-left: 5px;
-      text-align: center;
-      border-radius: 25px;
-    }
+.content {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #111;
+  box-shadow: 1px -0px 3px 1px #999;
+  margin: 0 auto;
+  padding: 5px;
+}
 
-    /* Clear floats after rows */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: auto;
+  }
+}
 
-    /* Content */
-    .content {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 10px;
-      background: #111;
-      box-shadow: 1px -0px 3px 1px #999;
-      margin: 10px;
-      padding: 10px;
-    }
-
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 900px) {
-      .column {
-        width: 50%;
-      }
-    }
-
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .column, nav {
-        display: flex;
-        width: auto;
-        margin: 0 auto;
-        padding: 30px auto;
-      }
-      .main {
-        width: 100%;
-        margin: 0;
-        padding: 50px 0;
-      }
-      .content {
-        width: 100%;
-        margin: 20px;
-        padding: 10px;
-      }
-      h1 {
-        font-size: 25px;
-        margin: 5px;
-      }
-      .container {
-        border-radius: 10px;
-        background: #111;
-        box-shadow: 1px -0px 2px 1px #666;
-        padding: 10px;
-      }
-      .socialbtns ul {
-        justify-content: center;
-        align-items: center;
-      }
-    }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .main {
+    margin: 0;
+    padding: 50px 0;
+  }
+  .content {
+    width: auto;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 5px;
+  }
+}
   </style>
 </head>
 <body>
-  <nav align="center" class="socialbtns">
+   <nav align="center" class="socialbtns">
     <ul>
       <li><a href="https://xamr0n.github.io/" class="fa fa-lg fa-home" title="Home"></a></li>
       <li><a href="https://xamr0n.github.io/webslide-portfolio" class="fa fa-lg fa-user" title="About Me"></a></li>
@@ -206,9 +174,55 @@
   </nav>
   <!-- MAIN (Center website) -->
   <div class="main">
+    <h1>Webslides</h1>
+    <hr>
+    <h2>Slides collection</h2>
     <div class="content">
-      <h2>Text Portrait</h2>
-      <iframe src="https://xamr0n.github.io/text-image/" title="Text Portrait" style="width:100%; height:1000px; border:none;"></iframe>
+      <h2>Portfolio of a Document Controller</h2>
+      <iframe src="https://xamr0n.github.io/webslide-portfolio" title="Portfolio of a Document Controller" style="width:100%; height:600px; border:none;"></iframe>
+    </div>
+    <br>
+    <div class="content">
+      <h2>Rich History of the United Arab Emirates</h2>
+      <iframe src="https://xamr0n.github.io/webslide-uae" title="Rich History of the United Arab Emirates" style="width:100%; height:600px; border:none;"></iframe>
+    </div>
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+          <h3>My Work</h3>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+          <h3>My Work</h3>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+          <h3>My Work</h3>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+          <h3>My Work</h3>
+          <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <img src="/w3images/p3.jpg" alt="Bear" style="width:100%">
+      <h3>Some Other Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
   </div>
 </body>

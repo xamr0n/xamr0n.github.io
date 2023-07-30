@@ -1,175 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Norman</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body, html {
-      background-color: #000;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Norman</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+    body {
+      background: #212121;
       font-family: "Candara";
+      width: 100%;
+      color: #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    nav {
+      background: #212121;
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      width: 100%;
+    }
+
+    a, a:hover {
+      text-decoration: none;
+    }
+
+    .socialbtns, .socialbtns ul, .socialbtns li {
       margin: 0;
       padding: 0;
-      overflow: hidden;
-    }
-
-    .sidebar {
-      height: auto;
-      width: 20px;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #000;
-      padding-top: 20px;
-    }
-    .sidebar a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 20px;
-      color: #818181;
-      display: flex;
-    }
-
-    .sidebar a:hover {
-      color: #f1f1f1;
-    }
-
-    .main {
-      height: 100%;
-      margin: 0 160px 0 160;
-      padding: 0;
-      background: #000;
-      display: absolute;
-    }
-
-    .wrapper {
-      background: rgba(0, 0, 0, .99999);
-      display: grid;
-      place-items: center;
       height: auto;
     }
 
-    .portrait {
-      font-family: "Impact";
-      font-size: 11px;
-      line-height: 9px;
-      background: url("https://github.com/xamr0n/webslide-portfolio/blob/main/static/images/xAm.jpg?raw=true") fixed top no-repeat;
-      background-size: contain;
-      max-width: 600px;
-      width: 100%;
-      height: auto;
-    }
-    .portrait {
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: rgba(0, 0, 0, .00001);
-    }
-
-    .border-image {
-      border-style: 10px solid black;
-      border-width: 10px;
-      border-image-source: url("https://github.com/xamr0n/webslide-portfolio/blob/main/static/images/xAm.jpg?raw=true");
-      border-image-slice: 10px;
-      border-image-width: 10px;
-      overflow: hidden;
-    }
-    
-    .tooltip {
-      position: relative;
+    .socialbtns li {
+      list-style: none outside none;
       display: inline-block;
-      border-bottom: 1px dotted black;
-      font-family: "Impact";
-      font-size: 12px;
+      padding: 5px;
     }
 
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: transparent;
-      color: #fff;
+    .socialbtns .fa {
+      color: #666;
+      background: #212121;
+      box-shadow: 1px -0px 3px 1px #999;
+      width: 40px;
+      height: 28px;
+      padding-top: 12px;
+      border-radius: 30px;
+      -moz-border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -o-border-radius: 30px;
+      transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -webkit-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      transform: rotate(-360deg);
+      -moz-transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+      -o-transform: rotate(-360deg);
+    }
+
+    .socialbtns .fa:hover {
+      text-shadow: inset 1px 1px 1px #eee;
+      color: #ddd;
+      transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -webkit-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+    }
+
+    /* Center website */
+    .main {
+      display: flex;
+      width: 1200px;
+      margin: 50px auto;
+      padding: 50px auto;
+      background-color: #212121;
+      justify-content: center;
+      align-items: center;
+      font-family: Candara;
+      overflow: hidden;
+    }
+
+    .container {
+      border-radius: 10px;
+      background: #111;
+      box-shadow: 1px -0px 2px 1px #666;
+      padding: 10px;
+    }
+
+    h1 {
       text-align: center;
-      border-radius: 6px;
-      padding: 5px 0;
-      position: absolute;
-      z-index: 1;
-      bottom: 50%;
-      left: 50%;
-      margin-left: -60px;
-      opacity: 0;
-      transition: opacity 0.3s;
+      font-size: 35px;
+      word-break: break-all;
     }
 
-    .tooltip .tooltiptext::after {
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px double #666;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    .row {
+      margin: 8px -16px;
+    }
+
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+
+    /* Create four equal columns that float next to each other */
+    .column {
+      float: left;
+      width: 23%;
+      margin-left: 5px;
+      text-align: center;
+      border-radius: 25px;
+    }
+
+    /* Clear floats after rows */
+    .row:after {
       content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 6px;
-      border-style: solid;
-      border-color: #fff transparent transparent transparent;
+      display: table;
+      clear: both;
     }
 
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
+    /* Content */
+    .content {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background: #111;
+      box-shadow: 1px -0px 3px 1px #999;
+      margin: 10px;
+      padding: 10px;
     }
 
-    @media screen and (max-width: 768px) {
-      .sidebar {
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column, nav {
+        display: flex;
         width: auto;
-        height: auto;
-        overflow-x: hidden;
-        padding-top: 10px;
-        margin-bottom: 0px;
+        margin: 0 auto;
+        padding: 30px auto;
       }
-
       .main {
+        display: block;
+        width: auto;
         margin: 0;
-        padding: 0;
+        padding: 50px 0;
+      }
+      .content {
+        display: block;
+        width: auto;
+        margin: 0;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 25px;
+        margin: 5px auto;
+      }
+      .container {
+        border-radius: 10px;
+        background: #111;
+        box-shadow: 1px -0px 2px 1px #666;
+        padding: 10px;
+      }
+      .socialbtns ul {
+        justify-content: center;
+        align-items: center;
       }
     }
-
-    @media screen and (max-height: 450px) {
-      .sidebar {
-        padding-top: 15px;
-        font-size: 12px; 
-      }
-  
-      .sidebar a {
-        font-size: 10px;  
-      }
-
-      .portrait, .border-image, main {
-        margin: 0;
-        padding: 0;
-      }
-    }
-    </style>
-  </head>
-    <body>
-      <div class="sidebar" style="text-align:center;">
-        <div class="tooltip">
-          <a href="#home"><i class="fa fa-fw fa-home"> </i></a><span class="tooltiptext">Home</span>
-        </div>
-        <div class="tooltip">
-          <a href="#services"><i class="fa fa-fw fa-wrench"></i></a><span class="tooltiptext">Services</span>
-        </div>
-        <div class="tooltip">
-          <a href="https://xamr0n.github.io/cv.html"><i class="fa fa-fw fa-user"></i></a><span class="tooltiptext">About Me</span>
-        </div>
-        <div class="tooltip">
-          <a href="mailto:calayonorman@gmail.com?subject=Interested%20For%20Your%20Service"><i class="fa fa-fw fa-envelope"></i></a><span class="tooltiptext">Email Me</span>
-        </div>
-      </div>
-      <div id="home" class="main">
-        <div class="wrapper">
-          <p class="portrait">
-            LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the tivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek. LIFE IS BEAUTIFUL: Embracing Joy Amidst Adversity. Introduction: Life is a beautiful gift bestowed upon us, filled with remarkable moments, personal growth, and cherished relationships. It is a captivating journey that unfolds with various twists and turns, shaping us into the individuals we are meant to become. Despite the inevitable challenges that life presents, it is essential to recognize and appreciate the beauty that resides within each experience. This essay explores the notion that life is truly beautiful, urging us to embrace joy amidst adversity and discover the profound meaning that lies within. The beauty of resilience: Life often presents us with obstacles that test our strength and resilience. These challenges, although difficult, provide an opportunity for growth and self-discovery. Adversity teaches us valuable lessons, allowing us to develop resilience and learn from our experiences. The beauty of resilience lies in our ability to rise above hardships, persevere, and emerge stronger and wiser. The beauty of human connections: One of the greatest treasures in life is the relationships we forge with others. Whether it be with family, friends, or romantic partners, these connections add depth and meaning to our existence. The beauty of human relationships lies in the love, support, and understanding we share with one another. They provide comfort in times of distress, celebrate our joys, and remind us that we are not alone in this journey. The beauty of personal growth: Life offers countless opportunities for personal growth and self-improvement. Each challenge we face, every mistake we make, and every success we achieve contributes to our personal development. The beauty of personal growth lies in the transformative power it holds. Through introspection and self-reflection, we can identify our strengths and weaknesses, embrace change, and continuously evolve into the best versions of ourselves. The beauty of simple pleasures: Often, it is the simplest of things that bring us the greatest joy. The beauty of life lies in the small moments that captivate our hearts—the warmth of a sunrise, the laughter of a loved one, the scent of fresh flowers, or the taste of our favorite meal. These simple pleasures remind us to appreciate the present and find happiness in the little things, making life's journey all the more beautiful. The beauty of pursuing passions: Life becomes even more enchanting when we discover and pursue our passions. Whether it be through art, music, sports, or any other form of expression, engaging in activities that ignite our souls brings immense joy and fulfillment. The beauty of pursuing our passions lies in the liberation and self-expression it provides. It allows us to connect with our true selves, unleash our creativity, and find purpose in our daily lives. Conclusion: Life is indeed beautiful, encompassing a tapestry of experiences that shape our existence. It is in the face of adversity that we discover our true strength, in our relationships that we find solace and support, and in our personal growth that we achieve self-actualization. By embracing the simple pleasures and pursuing our passions, we unlock the profound beauty that resides within each passing moment. Let us cherish this extraordinary gift, for it is in recognizing the beauty of life that we find the ultimate fulfillment and happiness we seek.
-          </p>
-        </div>
-      </div>
-    </body>
-    </html> 
+  </style>
+</head>
+<body>
+  <nav align="center" class="socialbtns">
+    <ul>
+      <li><a href="https://xamr0n.github.io/" class="fa fa-lg fa-home" title="Home"></a></li>
+      <li><a href="https://xamr0n.github.io/webslide-portfolio" class="fa fa-lg fa-user" title="About Me"></a></li>
+      <li><a href="https://xamr0n.github.io/webslides" class="fa fa-lg fa-briefcase" title="Webslides"></a></li>
+      <li><a href="#" class="fa fa-lg fa-envelope" title="Email Me"></a></li>
+      <li><a href="#" class="fa fa-lg fa-pencil" title="istoryahe"></a></li>
+      <li><a href="#" class="fa fa-lg fa-qrcode" title="QR Code"></a></li>
+      <li><a href="#" class="fa fa-lg fa-code" title="Code"></a></li>
+    </ul>
+  </nav>
+  <!-- MAIN (Center website) -->
+  <div class="main">
+    <div class="content">
+      <h2>Text Portrait</h2>
+      <iframe src="https://xamr0n.github.io/text-image/" title="Text Portrait" style="width:100%; height:1000px; border:none;"></iframe>
+    </div>
+  </div>
+</body>
+</html>

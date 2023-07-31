@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personalized QR Code</title>
+    <meta name="description" content="Presentation created from Webslides">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+    <link rel="stylesheet" type='text/css' media='all' href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+    <main role="main">
+      <article id="webslides" class="Vertical">
+        
+        <!-- 1 -->
+        <section>
+          <div class="wrap size-60 zoomIn aligncenter">
+            <div class="content-center" style="text-shadow: 2px 2px 5px #999;">
+              <h2 class="fadeInUp text-landing">Personalized QR Code</h2>
+            </div>
+            <figure>
+              <img src="qr/transpa.png" alt="QR Code">
+            </figure>
+          </div>
+        </section>
+        
+        <!-- 2 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInLeft aligncenter">
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  McLaren 720S 
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+              <figure>
+                <img src="qr/lcss5s.png" alt="QR Code">
+              </figure>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 3 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInRight aligncenter">
+              <figure>
+                <img src="qr/shan-shan2.png" alt="QR Code">
+              </figure>
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Puppy (Shan-Shan)
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 4 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 zoomIn aligncenter">
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Father & Son
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+              <figure>
+                <img src="qr/Dabe3.png" alt="QR Code">
+              </figure>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 5 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInLeft aligncenter">
+              <figure>
+                <img src="qr/mahdi-trans-con-bg.png" alt="QR Code">
+              </figure>
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Social Media Influencer
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 6 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInRight aligncenter">
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Hatstore (Online Store)
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+              <figure>
+                <img src="qr/hatstore2.png" alt="QR Code">
+              </figure>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 7 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 zoomIn aligncenter">
+              <figure>
+                <img src="qr/lcsss.png" alt="QR Code">
+              </figure>
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Luxury Supercar Rental
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 8 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInLeft aligncenter">
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Luxury Supercar Rental
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+              <figure>
+                <img src="qr/lcss3s.png" alt="QR Code">
+              </figure>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 9 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInRight aligncenter">
+              <figure>
+                <img src="qr/lcss76s.png" alt="QR Code">
+              </figure>
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Luxury Supercar Rental
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 10 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 zoomIn aligncenter">
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Luxury Supercar Rental
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+              <figure>
+                <img src="qr/lux-porsche0.png" alt="QR Code">
+              </figure>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 11 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInLeft aligncenter">
+              <figure>
+                <img src="qr/triffid-dark-BG.png" alt="QR Code">
+              </figure>
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Triffid Media
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 12 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 slideInRight aligncenter">
+              <figure>
+                <img src="qr/triffid-light-BG.png" alt="QR Code">
+              </figure>
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Triffid Media
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- 13 -->
+        <section>
+          <div class="wrap">
+            <div class="card-40 zoomIn aligncenter">
+              <div class="flex-content fadeInUp" style="text-shadow: 2px 2px 5px #999;">
+                <h2>
+                  Zoo Shop Pet Supplies
+                </h2>
+                <p>Personalized QR Code</p>
+              </div>
+              <figure>
+                <img src="qr/zoopet.png" alt="QR Code">
+              </figure>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </main>
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides({ autoslide: 5000 });
+    </script>
+    <script defer src="static/js/svg-icons.js"></script>
+  </body>
+</html>

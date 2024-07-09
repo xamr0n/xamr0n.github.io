@@ -1,7 +1,13 @@
 html {
-  font-size: 16px;
+  font-size: 13px;
   font-family: 'Candara', serif;
   background-color: #303030;
+}
+
+body {
+  margin: 0;
+  width: 794px;
+  height: 1123px;
 }
 
 * {
@@ -51,14 +57,6 @@ p, li {
   color: #444;
   margin: 10px auto;
   letter-spacing: 1px;
-}
-
-body {
-  inline-size: 1000px;
-  margin: 1px auto 0;
-  background-color: #ffffff;
-  padding: 0 20px 20px 20px;
-  border: 2px solid #444;
 }
 
 .fa-linkedin {

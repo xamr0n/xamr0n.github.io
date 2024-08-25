@@ -33,6 +33,6 @@ body, html {
   border-style: 10px solid black;
   border-width: 10px;
   border-image-source: url("https://github.com/xamr0n/webslide-portfolio/blob/main/static/images/xAm.jpg?raw=true);
-  border-image-slice: 10;
+  border-image-slice: 10px;
   border-image-width: 10px;
 }
